@@ -1,0 +1,210 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.wordle-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.message {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Board styles */
+.board {
+  margin-bottom: 30px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #d3d6da;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 4px;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.cell-filled {
+  border-color: #878a8c;
+}
+
+.cell-correct {
+  background-color: #6aaa64;
+  color: white;
+  border-color: #6aaa64;
+}
+
+.cell-present {
+  background-color: #c9b458;
+  color: white;
+  border-color: #c9b458;
+}
+
+.cell-absent {
+  background-color: #787c7e;
+  color: white;
+  border-color: #787c7e;
+}
+
+/* Keyboard styles */
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.keyboard-row {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.key {
+  min-width: 40px;
+  height: 58px;
+  margin: 0 3px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #d3d6da;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.key-large {
+  min-width: 80px;
+}
+
+.key-correct {
+  background-color: #6aaa64;
+  color: white;
+}
+
+.key-present {
+  background-color: #c9b458;
+  color: white;
+}
+
+.key-absent {
+  background-color: #787c7e;
+  color: white;
+}
+
+/* Button styles */
+.reset-button {
+  padding: 10px 20px;
+  background-color: #6aaa64;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.reset-button:hover {
+  background-color: #5d9957;
+}
+
+.hidden-input {
+  opacity: 0;
+  position: absolute;
+  height: 0;
+  width: 0;
+}
+/* Adaugă aceste animații la CSS-ul existent */
+
+@keyframes bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes flip {
+  0% { transform: rotateX(0); }
+  50% { transform: rotateX(90deg); }
+  100% { transform: rotateX(0); }
+}
+
+@keyframes press {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Actualizează clasele existente */
+
+.cell {
+  transition: all 0.3s ease;
+}
+
+.cell-filled {
+  animation: bounce 0.2s ease;
+}
+
+.cell-correct, .cell-present, .cell-absent {
+  animation: flip 0.6s ease;
+}
+
+.key:active {
+  animation: press 0.2s ease;
+}
+
+.message {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.reset-button:hover {
+  animation: pulse 1s infinite;
+}
+@keyframes underline {
+  from { border-bottom: 2px solid transparent; }
+  to { border-bottom: 2px solid #6aaa64; }
+}
+
+.row.current-row {
+  animation: underline 0.5s alternate infinite;
+}
