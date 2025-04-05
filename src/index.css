@@ -123,6 +123,23 @@ body {
 }
 
 /* Button styles */
+.back-button {
+  padding: 10px 20px;
+  background-color: grey;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.back-button:hover {
+  background-color: #333;
+  animation: pulse 1s infinite;
+}
+
 .reset-button {
   padding: 10px 20px;
   background-color: #6aaa64;
@@ -175,8 +192,6 @@ body {
   100% { transform: scale(1); }
 }
 
-/* Actualizează clasele existente */
-
 .cell {
   transition: all 0.3s ease;
 }
@@ -200,6 +215,50 @@ body {
 .reset-button:hover {
   animation: pulse 1s infinite;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.game-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 10px;
+  width: 100%;
+  animation: fadeIn 1s ease-out;
+}
+
+.game-button {
+  padding: 15px 30px;
+  background-color: #6aaa64;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  min-width: 200px;
+  animation: fadeIn 1.2s ease-out; 
+}
+
+.game-button:hover {
+  background-color: #5d9957;
+  transform: scale(1.05);
+}
+
+.game-button:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
 @keyframes underline {
   from { border-bottom: 2px solid transparent; }
   to { border-bottom: 2px solid #6aaa64; }

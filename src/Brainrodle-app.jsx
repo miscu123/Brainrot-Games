@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './index.css';
+import { useHistory } from 'react-router-dom';
 
-const Wordle = () => {
+const Brainrodle = () => {
   // Game constants
+  const history = useHistory();
   const MAX_ATTEMPTS = 6;
 
   // Game state
@@ -234,8 +236,9 @@ const renderKeyboard = () => {
       {gameStatus !== 'playing' && (
         <button className="reset-button" onClick={resetGame}>Play Again</button>
       )}
+      <button className="back-button" onClick={() => history.push('/')}>Back to Menu</button>
     </div>
   );
 };
 
-export default Wordle;
+export default Brainrodle;
