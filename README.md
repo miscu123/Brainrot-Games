@@ -1,12 +1,37 @@
-# React + Vite
+# 🧠💀 Brainrodle 
+*A Wordle clone for the brainrot generation*
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Gameplay Screenshot](assets/gameplay.gif) <!-- Add your screenshot here -->
 
-Currently, two official plugins are available:
+Guess the trending brainrot word in 6 tries. Each guess must be a valid cringe-worthy term (e.g., "skibidi", "gyatt", "sigma"). Letters change color to show how close you were to the Ohio Fanum Tax rizz.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Demo
+[Play Brainrodle Now!](https://your-deployed-link.vercel.app) <!-- Add your deployment link -->
 
-## Expanding the ESLint configuration
+## 🔥 Features
+- **Gen Z Lexicon**: 100+ brainrot words (JSON-powered)
+- **Mobile-First**: Responsive design that works on TikTok-scrolling thumbs
+- **Viral Visuals**: 
+  - Color feedback like Wordle (but with rizz)
+  - Confetti explosion on sigma male Ws
+- **Shareable Results**: Copy-paste your score to flex on Discord
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+| Component | Technology |
+|-----------|------------|
+| Frontend  | React 18   |
+| Styling   | CSS Modules|
+| Word Data | JSON       |
+| Hosting   | Vercel     |
+
+## 🚀 Local Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/brainrodle.git
+
+2. Commands:
+   ```bash
+   cd brainrodle
+   npm install
+   npm start
+3. Open http://localhost:3000 to play!
