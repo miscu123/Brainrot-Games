@@ -5,9 +5,6 @@
 
 Guess the trending brainrot word in 6 tries. Each guess must be a valid cringe-worthy term (e.g., "skibidi", "gyatt", "sigma"). Letters change color to show how close you were to the Ohio Fanum Tax rizz.
 
-## 🌐 Live Demo
-[Play Brainrodle Now!](https://your-deployed-link.vercel.app) <!-- Add your deployment link -->
-
 ## 🔥 Features
 - **Gen Z Lexicon**: 100+ brainrot words (JSON-powered)
 - **Mobile-First**: Responsive design that works on TikTok-scrolling thumbs
@@ -22,7 +19,6 @@ Guess the trending brainrot word in 6 tries. Each guess must be a valid cringe-w
 | Frontend  | React 18   |
 | Styling   | CSS Modules|
 | Word Data | JSON       |
-| Hosting   | Vercel     |
 
 ## 🚀 Local Setup
 1. Clone the repository:
